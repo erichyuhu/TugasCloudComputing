@@ -1,7 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-analytics.js";
 import { getDatabase, ref, push, onValue, update, remove } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, onAuthStateChanged, sendEmailVerification } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyD6H5Shrl4pMsO9C5n6Z-sRP2LwICSdYhI",
@@ -20,4 +20,4 @@ const db = getDatabase(app);
 const auth = getAuth(app);
 
 // Export db dan fungsi-fungsi Firebase agar bisa dipakai di file JS lain
-export { auth, db, ref, push, onValue, update, remove ,signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, onAuthStateChanged};
+export { auth, db, ref, push, onValue, update, remove ,signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, sendEmailVerification, onAuthStateChanged};
